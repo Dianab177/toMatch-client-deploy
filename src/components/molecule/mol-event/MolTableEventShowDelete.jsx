@@ -86,7 +86,7 @@ export default function MolTableEventShowDelete() {
                   <button
                     type="button"
                     className="inline-flex items-center rounded-xl px-4 py-3 text-lg font-semibold text-white hover:text-orange shadow-sm ring-2 ring-inset ring-orange hover:bg-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
-                     onClick={() => handleDelete(selectedEvent[0].id)}
+                    onClick={() => handleDelete(selectedEvent[0].id)}
                   >
                     Eliminar
                   </button>
@@ -108,6 +108,7 @@ export default function MolTableEventShowDelete() {
                         ref={checkbox}
                         checked={checked}
                         onChange={toggleAll}
+                        name="select_all"
                       />
                     </th>
                     <th scope="col" className="min-w-[12rem] py-3.5 pr-3 text-left text-lg font-semibold text-white">
@@ -183,25 +184,3 @@ export default function MolTableEventShowDelete() {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

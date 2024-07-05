@@ -10,7 +10,7 @@ export const Provider = ({ children }) => {
     async function fetchData() {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/recruiters"
+          "REACT_APP_BACKEND_URL"
         );
         if (response.status === 200) {
           const data = await response.json();
@@ -37,3 +37,4 @@ export const Provider = ({ children }) => {
     </ApiContext.Provider>
   );
 };
+//REACT_APP_BACKEND_URL="http://127.0.0.1:8000/api"

@@ -5,9 +5,10 @@ const baseUrl = process.env.REACT_APP_BACKEND_URL;
 const axiosInstance = axios.create({
   baseURL: baseUrl,
   headers: {
+    'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    'Content-Type': 'application/json'
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Auth-Token, Authorization, Origin, X-Requested-With, Accept'
   }
 });
 

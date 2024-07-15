@@ -1,33 +1,25 @@
 import axios from 'axios';
 
+
 const baseUrl = process.env.REACT_APP_BACKEND_URL;
 
-const axiosInstance = axios.create({
-  baseURL: baseUrl,
-  headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, X-Auth-Token, Authorization, Origin, X-Requested-With, Accept'
-  }
-});
 
 export const getEvento = () => {
-  return axiosInstance.get("/events");
+  return axios.get(baseUrl + "/events")
 }
 
 export const getEventoById = (id) => {
-  return axiosInstance.get("/events/" + id);
+  return axios.get(baseUrl + "/events/" + id)
 }
 
 export const createEvento = (data) => {
-  return axiosInstance.post("/events", data);
+  return axios.post(baseUrl + "/events", data)
 }
 
 export const updateEvento = (id, data) => {
-  return axiosInstance.put("/events/" + id, data);
+  return axios.put(baseUrl + "/events/" + id, data)
 }
 
 export const deleteEvento = (id) => {
-  return axiosInstance.delete("/events/" + id);
+  return axios.delete(baseUrl + "/events/" + id)
 }
